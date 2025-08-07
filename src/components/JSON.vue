@@ -90,14 +90,18 @@
         {{ day }}: {{ hours.open }} - {{ hours.close }}
         </li>
        </ul>
-
       <h3>Working with Arrays in Objects</h3>
-      <!-- Activity 12: Get the top sellers from the bookstores object. -->
+      Activity 12: Get the top sellers from the bookstores object. 
       <!-- TODO: CODE TO GET TOP SELLERS HERE -->
       <p>We operate in:</p>
-      <p>{{ bookstores.regions.join(', ') }}</p>
-      <p>Our #1 seller:</p>
-      <p>{{ bookstores.topSellers[0] }}</p>
+      <p>{{ bookstores.regions?.join(', ') }}</p>
+      <p>Top Sellers:</p>
+      <ul>
+        <li v-for="(seller, index) in bookstores.topSellers" :key="index">
+          {{ seller }}
+        </li>
+      </ul>
+      
     </section>
 
     <section class="lab-section">
