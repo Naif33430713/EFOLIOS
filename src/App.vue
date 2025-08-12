@@ -1,16 +1,6 @@
-<template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <JSON />
-</template>
-
-<script>
-import JSON from './components/JSON.vue';
-// import JsonComponent from './components/JSON.vue'
-
-export default {
-  name: 'App',
-  components: {
-    JSON
-  }
-}
+<script setup>
+import LoginForm from './components/LoginForm.vue';
 </script>
+<template>
+   <LoginForm/>
+   </template>
