@@ -6,9 +6,9 @@
 
         <!-- Form -->
         <form @submit.prevent="submitForm">
-          <!-- Row 1: Username + Password -->
+          <!-- Row 1: Username + Password (2 columns at all widths) -->
           <div class="row mb-3">
-            <div class="col-md-6">
+            <div class="col-6">
               <label for="username" class="form-label">Username</label>
               <input
                 id="username"
@@ -19,7 +19,7 @@
               />
             </div>
 
-            <div class="col-md-6">
+            <div class="col-6">
               <label for="password" class="form-label">Password</label>
               <input
                 id="password"
@@ -31,10 +31,10 @@
             </div>
           </div>
 
-          <!-- Row 2: Checkbox + Gender -->
+          <!-- Row 2: Checkbox + Gender (2 columns at all widths) -->
           <div class="row mb-3">
-            <div class="col-md-6">
-              <div class="form-check">
+            <div class="col-6">
+              <div class="form-check mt-4">
                 <input
                   id="isAustralian"
                   type="checkbox"
@@ -47,7 +47,7 @@
               </div>
             </div>
 
-            <div class="col-md-6">
+            <div class="col-6">
               <label for="gender" class="form-label">Gender</label>
               <select
                 id="gender"
@@ -74,16 +74,20 @@
             ></textarea>
           </div>
 
-          <!-- Buttons -->
-          <div class="text-center">
-            <button type="submit" class="btn btn-primary me-2">Submit</button>
-            <button
-              type="button"
-              class="btn btn-secondary"
-              @click="clearForm"
-            >
-              Clear
-            </button>
+          <!-- Buttons: side by side at all widths -->
+          <div class="row g-2 mt-4">
+            <div class="col-6">
+              <button type="submit" class="btn btn-primary w-100">Submit</button>
+            </div>
+            <div class="col-6">
+              <button
+                type="button"
+                class="btn btn-secondary w-100"
+                @click="clearForm"
+              >
+                Clear
+              </button>
+            </div>
           </div>
         </form>
 
