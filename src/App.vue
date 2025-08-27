@@ -1,6 +1,12 @@
-<script setup>
-import LoginForm from './components/LoginForm.vue';
-</script>
 <template>
-   <LoginForm/>
-   </template>
+  <BHeader />
+  <router-view />
+</template>
+
+<script setup>
+import BHeader from './components/BHeader.vue'
+</script>
+
+<style>
+.container { max-width: 900px; }
+</style>
