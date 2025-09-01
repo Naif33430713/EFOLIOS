@@ -13,7 +13,6 @@
           </router-link>
         </li>
 
-        <!-- Auth-aware nav -->
         <li class="nav-item" v-if="!authed">
           <router-link to="/login" class="nav-link" active-class="active">Login</router-link>
         </li>

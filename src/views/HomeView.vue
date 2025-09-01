@@ -31,7 +31,7 @@
         <div v-if="errors.password" class="text-danger">{{ errors.password }}</div>
       </div>
 
-      <!-- Confirm Password (validate on blur only) -->
+      
       <div class="col-md-6 col-sm-6">
         <label for="confirm-password" class="form-label">Confirm password</label>
         <input
@@ -46,7 +46,7 @@
         </div>
       </div>
 
-      <!-- Australian resident -->
+      
       <div class="col-md-6 col-sm-6 d-flex align-items-end">
         <div class="form-check">
           <input
@@ -59,7 +59,6 @@
         </div>
       </div>
 
-      <!-- Gender -->
       <div class="col-md-6 col-sm-6">
         <label class="form-label">Gender</label>
         <select class="form-select" v-model="formData.gender">
@@ -72,7 +71,7 @@
         <div v-if="errors.gender" class="text-danger">{{ errors.gender }}</div>
       </div>
 
-      <!-- Reason for joining (green hint if contains "friend") -->
+     
       <div class="col-12">
         <label for="reason" class="form-label">Reason for joining</label>
         <textarea
@@ -86,7 +85,7 @@
         <div v-if="errors.reason" class="text-danger">{{ errors.reason }}</div>
       </div>
 
-      <!-- One-way vs Two-way binding demo (Suburb) -->
+     
       <div class="col-md-6">
         <label for="suburbOneWay" class="form-label">
           Suburb (one-way with v-bind:value)
@@ -123,7 +122,6 @@
         <button type="button" class="btn btn-secondary" @click="clearForm">Clear</button>
       </div>
 
-      <!-- Debug preview -->
       <div class="col-12">
         <pre class="bg-light p-2 rounded small">{{ formData }}</pre>
       </div>
@@ -170,7 +168,7 @@ const validatePassword = (blur) => {
   }
 }
 
-// Confirm-password: validate on blur only
+
 const validateConfirmPassword = (blur) => {
   if (formData.value.password !== formData.value.confirmPassword) {
     if (blur) errors.value.confirmPassword = 'Passwords do not match.'
