@@ -38,13 +38,28 @@ const auth = getAuth()
 const signin = () => {
   signInWithEmailAndPassword(auth, email.value, password.value)
     .then(() => {
-      console.log("Firebase Login Successful!")
-      console.log("Current user:", auth.currentUser) // show signed-in user
-      router.push("/") // redirect to home after login
+      const user = auth.currentUser;
+      console.log("Firebase Login Successful!");
+      console.log("Current user:", user.email);
+
+      // 🔑 Simulate role-based logic
+      let role = "user";
+      if (user.email === "admin@test.com") {
+        role = "admin";
+      }
+
+      console.log("Assigned role:", role);
+
+      // Redirect based on role
+      if (role === "admin") {
+        router.push("/admin");
+      } else {
+        router.push("/dashboard");
+      }
     })
     .catch((error) => {
-      console.log("Login failed:", error.code, error.message)
-      alert("Login failed: " + error.message) // show popup for feedback
-    })
-}
+      console.log("Login failed:", error.code, error.message);
+      alert("Login failed: " + error.message);
+    });
+};
 </script>
