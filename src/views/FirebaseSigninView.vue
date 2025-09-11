@@ -42,15 +42,15 @@ const signin = () => {
       console.log("Firebase Login Successful!");
       console.log("Current user:", user.email);
 
-      // 🔑 Simulate role-based logic
+      
       let role = "user";
-      if (user.email === "admin@test.com") {
+      if (user.email === "  ") {
         role = "admin";
       }
 
       console.log("Assigned role:", role);
 
-      // Redirect based on role
+      
       if (role === "admin") {
         router.push("/admin");
       } else {
